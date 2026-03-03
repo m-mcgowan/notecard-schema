@@ -67,7 +67,14 @@
                 {
                     "minimum": 15
                 }
-            ]
+            ],
+            "unit": "minutes",
+            "constants": {
+                "reset": {
+                    "value": -1,
+                    "description": "Reset to default"
+                }
+            }
         },
         "host": {
             "description": "The URL of the Notehub service. Use `\"-\"` to reset to the default value.",
@@ -76,7 +83,18 @@
         "inbound": {
             "description": "The max wait time, in minutes, to sync inbound data from Notehub. Explicit syncs (e.g. using `hub.sync`) do not affect this cadence.\n\nWhen in `periodic` or `continuous` mode this argument is required, otherwise the Notecard will function as if it is in `minimum` mode as it pertains to syncing behavior.\n\nUse `-1` to reset the value back to its default of `0`.\n\nA value of `0` means that the Notecard will never sync inbound data unless explicitly told to do so (e.g. using `hub.sync`).",
             "type": "integer",
-            "minimum": -1
+            "minimum": -1,
+            "unit": "minutes",
+            "constants": {
+                "reset": {
+                    "value": -1,
+                    "description": "Reset to default"
+                },
+                "manual": {
+                    "value": 0,
+                    "description": "Sync only when explicitly requested"
+                }
+            }
         },
         "mode": {
             "description": "The Notecard's synchronization mode.\n\n**NOTE:** The Notecard must be in `periodic` or `continuous` mode to use the onboard GPS module.",
@@ -124,7 +142,18 @@
         "outbound": {
             "description": "The max wait time, in minutes, to sync outbound data from the Notecard. Explicit syncs (e.g. using `hub.sync`) do not affect this cadence.\n\nWhen in `periodic` or `continuous` mode this argument is required, otherwise the Notecard will function as if it is in `minimum` mode as it pertains to syncing behavior.\n\nUse `-1` to reset the value back to its default of `0`.\n\nA value of `0` means that the Notecard will never sync outbound data unless explicitly told to do so (e.g. using `hub.sync`).",
             "type": "integer",
-            "minimum": -1
+            "minimum": -1,
+            "unit": "minutes",
+            "constants": {
+                "reset": {
+                    "value": -1,
+                    "description": "Reset to default"
+                },
+                "manual": {
+                    "value": 0,
+                    "description": "Sync only when explicitly requested"
+                }
+            }
         },
         "product": {
             "description": "A Notehub-managed unique identifier that is used to match Devices with Projects. This string is used during a device's auto-provisioning to find the Notehub Project that, once provisioned, will securely manage the device and its data.",
@@ -134,7 +163,8 @@
             "description": "If in `periodic` mode and using `on` above, the number of seconds to run in continuous mode before switching back to periodic mode. If not set, a default of 300 seconds is used. Ignored if the Notecard is already in continuous mode.",
             "type": "integer",
             "minApiVersion": "3.4.1",
-            "minimum": -1
+            "minimum": -1,
+            "unit": "seconds"
         },
         "sn": {
             "description": "The end product's serial number.",

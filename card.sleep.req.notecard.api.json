@@ -46,7 +46,14 @@
                 {
                     "minimum": 30
                 }
-            ]
+            ],
+            "unit": "seconds",
+            "constants": {
+                "reset": {
+                    "value": -1,
+                    "description": "Reset to default behavior"
+                }
+            }
         },
         "req": {
             "description": "Request for the Notecard (expects response)",

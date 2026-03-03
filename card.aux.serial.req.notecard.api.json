@@ -28,7 +28,8 @@
         "minutes": {
             "description": "When using `\"mode\": \"notify,dfu\"`, specify an interval for notifying the host.",
             "type": "integer",
-            "minApiVersion": "5.1.1"
+            "minApiVersion": "5.1.1",
+            "unit": "minutes"
         },
         "mode": {
             "description": "The AUX mode. Must be one of the following:",
@@ -67,7 +68,8 @@
         },
         "ms": {
             "description": "The delay in milliseconds before sending a buffer of `max` size.",
-            "type": "integer"
+            "type": "integer",
+            "unit": "milliseconds"
         },
         "rate": {
             "description": "The baud rate or speed at which information is transmitted over AUX serial. The default is `115200` unless using GPS, in which case the default is `9600`.",

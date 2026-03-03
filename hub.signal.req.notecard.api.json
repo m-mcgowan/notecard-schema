@@ -15,7 +15,8 @@
         "seconds": {
             "description": "The number of seconds to wait before timing out the request.",
             "type": "integer",
-            "minApiVersion": "5.1.1"
+            "minApiVersion": "5.1.1",
+            "unit": "seconds"
         },
         "req": {
             "description": "Request for the Notecard (expects response)",

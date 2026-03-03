@@ -15,7 +15,8 @@
     "properties": {
         "minutes": {
             "description": "If specified, creates a templated `_temp.qo` file that gathers Notecard temperature value at the specified minutes interval. _When using [card.aux track mode](/notecard/notecard-walkthrough/working-with-the-notecard-aux-pins#using-aux-track-mode), the sensor temperature, pressure, and humidity is also included with each Note._",
-            "type": "integer"
+            "type": "integer",
+            "unit": "minutes"
         },
         "status": {
             "description": "Overrides `minutes` with a voltage-variable value. For example: `\"usb:15;high:30;normal:60;720\"`. See [Voltage-Variable Sync Behavior](/notecard/notecard-walkthrough/low-power-design#voltage-variable-sync-behavior) for more information on configuring these values.",

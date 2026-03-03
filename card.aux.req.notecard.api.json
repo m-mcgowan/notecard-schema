@@ -243,7 +243,8 @@
                 "CELL+WIFI",
                 "WIFI"
             ],
-            "minApiVersion": "5.1.1"
+            "minApiVersion": "5.1.1",
+            "unit": "milliseconds"
         },
         "offset": {
             "description": "When used with `\"mode\":\"neo-monitor\"` or `\"mode\":\"track-neo-monitor\"`, this is the 1-based index in a strip of NeoPixels that determines which single NeoPixel the host can command.",
@@ -287,7 +288,8 @@
         "seconds": {
             "description": "When in `gpio` mode, if an `AUX` pin is configured as a `count` type, the count of rising edges can be broken into samples of this duration. Passing `0` or omitting this field will total into a single sample.",
             "type": "integer",
-            "minimum": -1
+            "minimum": -1,
+            "unit": "seconds"
         },
         "sensitivity": {
             "description": "When used with `\"mode\":\"neo-monitor\"` or `\"mode\":\"track-neo-monitor\"`, this controls the brightness of NeoPixel lights, where `100` is the maximum brightness and `1` is the minimum.",

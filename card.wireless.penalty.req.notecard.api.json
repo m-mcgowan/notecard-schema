@@ -15,17 +15,20 @@
         "add": {
             "description": "The number of minutes to add to successive retries. Used with the `set` argument to override the Network Registration Failure Penalty Box defaults.",
             "type": "integer",
-            "default": 15
+            "default": 15,
+            "unit": "minutes"
         },
         "max": {
             "description": "The maximum number of minutes that a device can be in a Network Registration Failure Penalty Box. Used with the `set` argument to override the Network Registration Failure Penalty Box defaults.",
             "type": "integer",
-            "default": 4320
+            "default": 4320,
+            "unit": "minutes"
         },
         "min": {
             "description": "The number of minutes of the first retry interval of a Network Registration Failure Penalty Box. Used with the `set` argument to override the Network Registration Failure Penalty Box defaults.",
             "type": "integer",
-            "default": 15
+            "default": 15,
+            "unit": "minutes"
         },
         "rate": {
             "description": "The rate at which the penalty box time multiplier is increased over successive retries. Used with the `set` argument to override the Network Registration Failure Penalty Box defaults.",

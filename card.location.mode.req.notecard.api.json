@@ -34,7 +34,8 @@
         "minutes": {
             "description": "When geofence is enabled, the number of minutes the device should be outside the geofence before the Notecard location is tracked.",
             "type": "integer",
-            "default": 5
+            "default": 5,
+            "unit": "minutes"
         },
         "mode": {
             "description": "Sets the location mode.",
@@ -79,7 +80,14 @@
                 {
                     "minimum": 5
                 }
-            ]
+            ],
+            "unit": "seconds",
+            "constants": {
+                "reset": {
+                    "value": -1,
+                    "description": "Reset to default"
+                }
+            }
         },
         "threshold": {
             "description": "When in `periodic` mode, the number of motion events (registered by the built-in accelerometer) required to trigger GPS to turn on.",

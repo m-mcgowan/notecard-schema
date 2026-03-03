@@ -201,7 +201,8 @@
         "seconds": {
             "description": "To set an ATTN timeout when arming, or when using `sleep`.\n\n_**NOTE:** When the Notecard is in `continuous` mode, the `seconds` timeout is serviced by a routine that wakes every 15 seconds. You can predict when the device will wake, by rounding up to the nearest 15 second interval._",
             "type": "integer",
-            "minimum": -1
+            "minimum": -1,
+            "unit": "seconds"
         },
         "start": {
             "description": "When using `sleep` mode and the host has reawakened, request the Notecard to return the stored `payload`.",
